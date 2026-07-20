@@ -1,0 +1,14 @@
+services:
+  owntime-assembleia:
+    build:
+      context: .
+      dockerfile: landing-pages/Dockerfile
+    container_name: owntime-assembleia
+    restart: unless-stopped
+    environment:
+      LANDING_PAGES_PORT: 4180
+      LANDING_PAGES_TRUST_PROXY: "true"
+      ASSEMBLEIA_SHEETS_WEBHOOK_URL: ${ASSEMBLEIA_SHEETS_WEBHOOK_URL:?set ASSEMBLEIA_SHEETS_WEBHOOK_URL in .env}
+      ASSEMBLEIA_SHEETS_WEBHOOK_TOKEN: ${ASSEMBLEIA_SHEETS_WEBHOOK_TOKEN:?set ASSEMBLEIA_SHEETS_WEBHOOK_TOKEN in .env}
+    ports:
+      - "${LANDING_PAGES_BIND:-127.0.0.1}:${LANDING_PAGES_HOST_PORT:-4180}:4180"
