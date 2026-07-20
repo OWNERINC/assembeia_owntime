@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Convocação para Assembleia Geral Sem Uso do Condomínio Home Club Gramado.">
+    <meta name="theme-color" content="#e9e6de">
+    <title>Owntime | Convocação para Assembleia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/owntime-assembleia/styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+    <main id="conteudo" class="notice" tabindex="-1">
+      <header class="brand-header">
+        <img class="brand-logo" src="/assets/owntime/logo%20full%20preto.webp" alt="Owntime Home Club Gramado" width="660" height="170" fetchpriority="high">
+        <span class="brand-fallback" hidden aria-hidden="true">Owntime</span>
+      </header>
+
+      <article class="invitation" aria-labelledby="page-title">
+        <h1 id="page-title">Convocação para Assembleia Geral Sem Uso</h1>
+        <p>Caro(a) Representante(a),</p>
+        <p>Em primeiro lugar, obrigado por ter acreditado em nossa empresa e no <strong>Condomínio Home Club Gramado.</strong> Somos gratos pela confiança depositada e estamos felizes com a materialização da entrega das fases 1, 2 e 3 do empreendimento.</p>
+        <p>Conforme previsto na Convenção de Condomínio, convocamos Vossa Senhoria para a <strong>Assembleia de Instalação, Sem Uso, do Condomínio Home Club Gramado, fases 1, 2 e 3.</strong></p>
+
+        <section class="meeting-details" aria-label="Detalhes da assembleia">
+          <h2>Assembleia Geral de Instalação Sem Uso</h2>
+          <dl>
+            <div><dt>Dia:</dt><dd>22 de abril de 2026</dd></div>
+            <div><dt>Horário:</dt><dd>1ª convocação - 10h00<br>2ª convocação - 10h30</dd></div>
+            <div><dt>Formato:</dt><dd>Virtual</dd></div>
+          </dl>
+        </section>
+
+        <p class="confirmation-copy"><strong>Confirme sua presença até 20/04/2026 preenchendo o formulário abaixo.</strong></p>
+
+        <a class="notice-button" data-edital aria-disabled="true">Edital de convocação</a>
+
+        <form novalidate>
+          <h2>Confirmação de presença</h2>
+          <p class="form-intro">Informe os dados do titular para receber as próximas comunicações sobre a assembleia. Todos os campos são obrigatórios.</p>
+
+          <div class="field">
+            <label for="titular">Nome ou razão social do titular</label>
+            <input id="titular" name="titular" autocomplete="off" maxlength="160" required>
+          </div>
+          <div class="field">
+            <label for="documento">CPF ou CNPJ do titular</label>
+            <input id="documento" name="documento" inputmode="numeric" autocomplete="off" maxlength="18" required>
+          </div>
+          <div class="field">
+            <label for="telefone">Telefone de contato</label>
+            <input id="telefone" name="telefone" type="tel" inputmode="tel" autocomplete="tel" maxlength="15" required>
+          </div>
+          <div class="honeypot" aria-hidden="true">
+            <label for="website">Website</label>
+            <input id="website" name="website" tabindex="-1" autocomplete="off">
+          </div>
+          <label class="consent" for="consentimento">
+            <input id="consentimento" name="consentimento" type="checkbox" required>
+            <span data-consent-copy>Autorizo o contato sobre esta assembleia e declaro estar ciente da <a data-privacy target="_blank" rel="noopener noreferrer">Política de Privacidade</a>.</span>
+          </label>
+          <button class="notice-button" type="submit">Confirmar presença</button>
+          <p class="form-status" data-status aria-live="polite"></p>
+        </form>
+      </article>
+
+      <footer class="brand-footer">
+        <div class="contact"><span>Central de relacionamento</span><br>54 3421 9988&nbsp;&nbsp; | &nbsp;&nbsp;contato@ownerinc.com.br</div>
+        <div class="partner-logos">
+          <span class="partner-fallback">Ownerinc</span>
+          <span aria-hidden="true">|</span>
+          <span class="partner-fallback">Nest</span>
+        </div>
+      </footer>
+    </main>
+    <script src="/owntime-assembleia/config.js"></script>
+    <script src="/owntime-assembleia/form.js"></script>
+  </body>
+</html>

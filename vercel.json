@@ -1,0 +1,48 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/landing-pages/owntime-assembleia/index.html"
+    },
+    {
+      "source": "/owntime-assembleia",
+      "destination": "/landing-pages/owntime-assembleia/index.html"
+    },
+    {
+      "source": "/owntime-assembleia/:path*",
+      "destination": "/landing-pages/owntime-assembleia/:path*"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; script-src 'self'; style-src 'self' https://fonts.googleapis.com"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), geolocation=(), microphone=()"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "same-origin"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        }
+      ]
+    }
+  ],
+  "functions": {
+    "api/owntime-assembleia/confirmacoes.mjs": {
+      "maxDuration": 10
+    }
+  }
+}
