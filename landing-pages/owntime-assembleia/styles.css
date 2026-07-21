@@ -40,11 +40,11 @@ body {
 .brand-logo:not([src]), .brand-logo[src=""] { display: none; }
 .brand-logo:not([src]) + .brand-fallback, .brand-logo[src=""] + .brand-fallback { display: block; }
 
-.invitation { padding: 30px 60px 52px; border-bottom: 6px solid var(--line); }
+.invitation { padding: 30px 60px 36px; border-bottom: 6px solid var(--line); }
 h1, h2, p { margin-top: 0; }
 h1 { margin-bottom: 24px; font-size: 18px; line-height: 1.2; text-transform: uppercase; letter-spacing: -0.5px; text-wrap: balance; }
 h2 { margin-bottom: 2px; font-size: 16px; line-height: 1.35; }
-p { margin-bottom: 22px; letter-spacing: 0.3px; }
+p { margin-bottom: 22px; letter-spacing: 0.3px; text-align: justify; text-align-last: left; }
 strong { font-weight: 700; }
 
 .meeting-details { margin: 26px 0; }
@@ -61,11 +61,14 @@ dd { margin: 0; }
 .confirmation-copy { margin: 26px 0 44px; }
 
 .notice-button {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: fit-content;
   min-width: 240px;
+  min-height: 46px;
   margin: 0 auto;
-  padding: 13px 18px;
+  padding: 0 18px;
   border: 0;
   border-radius: 24px;
   background: var(--ink);
@@ -74,6 +77,7 @@ dd { margin: 0; }
   font: inherit;
   font-size: 15px;
   font-weight: 700;
+  line-height: 1;
   letter-spacing: 1.1px;
   text-align: center;
   text-decoration: none;
@@ -111,7 +115,7 @@ form.was-validated input:not([type="checkbox"]):invalid { border-color: var(--er
 .form-status.success { color: var(--success); }
 .form-status.error { color: var(--error); }
 
-.brand-footer { display: flex; align-items: end; justify-content: space-between; gap: 24px; padding: 48px 26px 36px; background: var(--stone); }
+.brand-footer { display: flex; align-items: end; justify-content: space-between; gap: 24px; padding: 36px 26px 32px; background: var(--stone); }
 .contact { font-size: 12px; letter-spacing: 0.25px; }
 .contact span { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; }
 .partner-logos { display: flex; align-items: center; gap: 12px; color: var(--ink); }
@@ -121,8 +125,8 @@ form.was-validated input:not([type="checkbox"]):invalid { border-color: var(--er
 @media (max-width: 640px) {
   .notice { border-inline: 0; }
   .brand-header { min-height: 185px; }
-  .invitation { padding: 28px 25px 42px; }
-  .brand-footer { align-items: flex-start; flex-direction: column; padding: 34px 25px 30px; }
+  .invitation { padding: 28px 25px 32px; }
+  .brand-footer { align-items: flex-start; flex-direction: column; padding: 30px 25px 26px; }
   .notice-button { width: 100%; }
 }
 
