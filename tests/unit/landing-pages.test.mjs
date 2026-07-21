@@ -141,8 +141,9 @@ test('serves the isolated landing page and keeps confirmations unavailable witho
     const pageMarkup = await page.text();
     assert.match(pageMarkup, /Convocação para Assembleia Geral Com Uso/);
     assert.match(pageMarkup, /29 de julho de 2026/);
-    assert.match(pageMarkup, /1ª convocação - 08h30/);
-    assert.match(pageMarkup, /Confirme sua presença até 27\/07\/2026/);
+    assert.match(pageMarkup, /operações iniciadas em 03\/07\/2026/);
+    assert.match(pageMarkup, /1ª\. convocação - 8h30/);
+    assert.match(pageMarkup, /confirme sua presença até 26\/07\/2026/);
     assert.doesNotMatch(pageMarkup, /Nest/);
     assert.match(pageMarkup, /href="\/owntime-assembleia\/styles.css"/);
     assert.match(pageMarkup, /src="\/owntime-assembleia\/form.js"/);
