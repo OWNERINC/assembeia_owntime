@@ -1,6 +1,8 @@
 const config = window.OWNTIME_ASSEMBLEIA_CONFIG || {};
 const edital = document.querySelector('[data-edital]');
 const editalFrame = document.querySelector('[data-edital-frame]');
+const editalDialog = document.querySelector('[data-edital-dialog]');
+const editalClose = document.querySelector('[data-edital-close]');
 const privacy = document.querySelector('[data-privacy]');
 const form = document.querySelector('form');
 const submit = form.querySelector('button[type="submit"]');
@@ -49,17 +51,25 @@ document.querySelector('[name="telefone"]').addEventListener('input', (event) =>
 });
 
 if (config.editalUrl) {
-  edital.href = config.editalEmbedUrl ? '#edital' : config.editalUrl;
   edital.removeAttribute('aria-disabled');
   edital.textContent = 'Edital de convocação';
   if (config.editalEmbedUrl) {
-    editalFrame.src = config.editalEmbedUrl;
+    edital.addEventListener('click', (event) => {
+      event.preventDefault();
+      editalFrame.src ||= config.editalEmbedUrl;
+      editalDialog.showModal();
+    });
+    editalClose.addEventListener('click', () => editalDialog.close());
+    editalDialog.addEventListener('click', (event) => {
+      if (event.target === editalDialog) editalDialog.close();
+    });
   } else {
-    editalFrame.closest('.edital-document').remove();
+    edital.href = config.editalUrl;
+    editalDialog.remove();
   }
 } else {
   edital.textContent = 'Edital em breve';
-  editalFrame.closest('.edital-document').remove();
+  editalDialog.remove();
 }
 
 if (config.privacyPolicyUrl) {

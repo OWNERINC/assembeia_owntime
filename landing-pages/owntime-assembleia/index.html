@@ -22,8 +22,8 @@
       <article class="invitation" aria-labelledby="page-title">
         <h1 id="page-title">Convocação para Assembleia Geral Com Uso</h1>
         <p>Caro(a) Representante(a),</p>
-        <p>Em primeiro lugar, obrigado por ter acreditado em nossa empresa e no Condomínio Home Club Gramado. Somos gratos pela confiança depositada e estamos felizes com a entrega das fases 1, 2 e 3 do empreendimento.</p>
-        <p>Conforme previsto na Convenção de Condomínio, esta <strong>ASSEMBLEIA GERAL É DE INSTALAÇÃO DE CONDOMÍNIO COM USO</strong>, com o objetivo de dar continuidade às operações iniciadas em 03/07/2026.</p>
+        <p>Em primeiro lugar, obrigado por ter acreditado na Ownerinc e no Condomínio Home Club Gramado. Agradecemos a confiança depositada e estamos felizes com a entrega das fases 1, 2 e 3 do empreendimento, na integralidade dos 40 Apartamentos, Infraestrutura de lazer e Residências de nº 14 a 24.</p>
+        <p>Conforme previsto na Convenção de Condomínio esta <strong>ASSEMBLEIA GERAL É DE INSTALAÇÃO DE CONDOMÍNIO COM USO</strong>, com o objetivo de dar continuidade às operações iniciadas em 03/07/2026.</p>
 
         <section class="meeting-details" aria-label="Detalhes da assembleia">
           <h2>Assembleia Geral de Instalação com uso</h2>
@@ -42,12 +42,15 @@
 
         <p class="confirmation-copy"><strong>Em breve, você receberá as informações de acesso. É imprescindível que confirme sua presença até 26/07/2026.</strong></p>
 
-        <a class="notice-button" data-edital aria-disabled="true">Edital de convocação</a>
+        <a class="notice-button" data-edital aria-disabled="true" aria-haspopup="dialog">Edital de convocação</a>
 
-        <section id="edital" class="edital-document" aria-labelledby="edital-title">
-          <h2 id="edital-title">Edital de convocação</h2>
+        <dialog class="edital-dialog" data-edital-dialog aria-labelledby="edital-title">
+          <header class="edital-dialog-header">
+            <h2 id="edital-title">Edital de convocação</h2>
+            <button class="edital-dialog-close" type="button" data-edital-close>Fechar</button>
+          </header>
           <iframe data-edital-frame title="Edital de convocação" loading="lazy"></iframe>
-        </section>
+        </dialog>
 
         <form novalidate>
           <h2>Confirmação de presença</h2>

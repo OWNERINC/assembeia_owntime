@@ -88,8 +88,12 @@ dd { margin: 0; }
 .notice-button:active { background: #171716; }
 .notice-button:focus-visible, input:focus-visible, .consent a:focus-visible, .mobile-notice a:focus-visible { outline: 3px solid var(--line); outline-offset: 3px; }
 .notice-button[aria-disabled="true"], .notice-button:disabled { cursor: not-allowed; opacity: 0.55; pointer-events: none; }
-.edital-document { margin-top: 32px; scroll-margin-top: 24px; }
-.edital-document iframe { display: block; width: 100%; height: 760px; border: 1px solid #cbc7bf; }
+.edital-dialog { width: min(1100px, calc(100% - 32px)); height: min(900px, calc(100dvh - 32px)); padding: 0; border: 1px solid var(--ink); background: var(--paper); color: var(--ink); }
+.edital-dialog::backdrop { background: rgba(37, 37, 35, 0.6); }
+.edital-dialog-header { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 20px; border-bottom: 1px solid #cbc7bf; }
+.edital-dialog-header h2 { margin: 0; }
+.edital-dialog-close { padding: 8px 12px; border: 1px solid var(--ink); border-radius: 0; background: var(--paper); color: var(--ink); font: inherit; font-size: 14px; font-weight: 700; cursor: pointer; }
+.edital-dialog iframe { display: block; width: 100%; height: calc(100% - 60px); border: 0; }
 
 form { margin-top: 44px; padding-top: 30px; border-top: 1px solid #cbc7bf; scroll-margin-top: 24px; }
 .form-intro { margin-bottom: 24px; color: var(--quiet); font-size: 15px; }
@@ -130,7 +134,7 @@ form.was-validated input:not([type="checkbox"]):invalid { border-color: var(--er
   .invitation { padding: 28px 25px 32px; }
   .brand-footer { align-items: flex-start; flex-direction: column; padding: 30px 25px 26px; }
   .notice-button { width: 100%; }
-  .edital-document iframe { height: 620px; }
+  .edital-dialog { width: 100%; height: 100dvh; max-height: none; border: 0; }
 }
 
 @media (prefers-reduced-motion: no-preference) {
