@@ -139,7 +139,7 @@ test('serves the isolated landing page and keeps confirmations unavailable witho
     const page = await fetch(`http://127.0.0.1:${port}/owntime-assembleia/`);
     assert.equal(page.status, 200);
     const pageMarkup = await page.text();
-    assert.match(pageMarkup, /Convocação para Assembleia Geral Sem Uso/);
+    assert.match(pageMarkup, /Convocação para Assembleia Geral Com Uso/);
     assert.match(pageMarkup, /href="\/owntime-assembleia\/styles.css"/);
     assert.match(pageMarkup, /src="\/owntime-assembleia\/form.js"/);
     assert.match(pageMarkup, /Para participar pelo celular ou tablet/);
