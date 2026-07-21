@@ -35,7 +35,7 @@ body {
   border-bottom: 6px solid var(--line);
 }
 
-.brand-logo { display: block; max-width: 285px; max-height: 74px; }
+.brand-logo { display: block; width: min(285px, 100%); height: auto; }
 .brand-fallback { font-size: 39px; font-weight: 300; letter-spacing: -2px; }
 .brand-logo:not([src]), .brand-logo[src=""] { display: none; }
 .brand-logo:not([src]) + .brand-fallback, .brand-logo[src=""] + .brand-fallback { display: block; }
