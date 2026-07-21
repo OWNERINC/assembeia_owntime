@@ -147,6 +147,7 @@ test('serves the isolated landing page and keeps confirmations unavailable witho
     assert.doesNotMatch(pageMarkup, /Nest/);
     assert.match(pageMarkup, /href="\/owntime-assembleia\/styles.css"/);
     assert.match(pageMarkup, /src="\/owntime-assembleia\/form.js"/);
+    assert.match(pageMarkup, /Logo%20reduzido%20preto\.webp/);
     assert.match(pageMarkup, /Para participar pelo celular ou tablet/);
     assert.match(pageMarkup, /apps\.apple\.com\/app\/zoom-workplace/);
     assert.match(pageMarkup, /play\.google\.com\/store\/apps\/details\?id=us\.zoom\.videomeetings/);
@@ -158,7 +159,7 @@ test('serves the isolated landing page and keeps confirmations unavailable witho
     const internalFile = await fetch(`http://127.0.0.1:${port}/server.mjs`);
     assert.equal(internalFile.status, 404);
 
-    const logo = await fetch(`http://127.0.0.1:${port}/assets/owntime/logo%20full%20preto.webp`);
+    const logo = await fetch(`http://127.0.0.1:${port}/assets/owntime/Logo%20reduzido%20preto.webp`);
     assert.equal(logo.status, 200);
     assert.equal(logo.headers.get('content-type'), 'image/webp');
 
