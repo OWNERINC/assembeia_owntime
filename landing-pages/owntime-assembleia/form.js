@@ -1,5 +1,6 @@
 const config = window.OWNTIME_ASSEMBLEIA_CONFIG || {};
 const edital = document.querySelector('[data-edital]');
+const editalFrame = document.querySelector('[data-edital-frame]');
 const privacy = document.querySelector('[data-privacy]');
 const form = document.querySelector('form');
 const submit = form.querySelector('button[type="submit"]');
@@ -48,11 +49,17 @@ document.querySelector('[name="telefone"]').addEventListener('input', (event) =>
 });
 
 if (config.editalUrl) {
-  edital.href = config.editalUrl;
+  edital.href = config.editalEmbedUrl ? '#edital' : config.editalUrl;
   edital.removeAttribute('aria-disabled');
   edital.textContent = 'Edital de convocação';
+  if (config.editalEmbedUrl) {
+    editalFrame.src = config.editalEmbedUrl;
+  } else {
+    editalFrame.closest('.edital-document').remove();
+  }
 } else {
   edital.textContent = 'Edital em breve';
+  editalFrame.closest('.edital-document').remove();
 }
 
 if (config.privacyPolicyUrl) {

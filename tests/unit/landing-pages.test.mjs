@@ -148,6 +148,7 @@ test('serves the isolated landing page and keeps confirmations unavailable witho
     assert.match(pageMarkup, /href="\/owntime-assembleia\/styles.css"/);
     assert.match(pageMarkup, /src="\/owntime-assembleia\/form.js"/);
     assert.match(pageMarkup, /Logo%20reduzido%20preto\.webp/);
+    assert.match(pageMarkup, /data-edital-frame/);
     assert.match(pageMarkup, /Para participar pelo celular ou tablet/);
     assert.match(pageMarkup, /apps\.apple\.com\/app\/zoom-workplace/);
     assert.match(pageMarkup, /play\.google\.com\/store\/apps\/details\?id=us\.zoom\.videomeetings/);

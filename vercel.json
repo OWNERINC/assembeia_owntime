@@ -19,7 +19,7 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; script-src 'self'; style-src 'self' https://fonts.googleapis.com"
+          "value": "default-src 'self'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'; frame-src https://docs.google.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; script-src 'self'; style-src 'self' https://fonts.googleapis.com"
         },
         {
           "key": "Permissions-Policy",

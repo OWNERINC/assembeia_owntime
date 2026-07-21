@@ -88,6 +88,8 @@ dd { margin: 0; }
 .notice-button:active { background: #171716; }
 .notice-button:focus-visible, input:focus-visible, .consent a:focus-visible, .mobile-notice a:focus-visible { outline: 3px solid var(--line); outline-offset: 3px; }
 .notice-button[aria-disabled="true"], .notice-button:disabled { cursor: not-allowed; opacity: 0.55; pointer-events: none; }
+.edital-document { margin-top: 32px; scroll-margin-top: 24px; }
+.edital-document iframe { display: block; width: 100%; height: 760px; border: 1px solid #cbc7bf; }
 
 form { margin-top: 44px; padding-top: 30px; border-top: 1px solid #cbc7bf; scroll-margin-top: 24px; }
 .form-intro { margin-bottom: 24px; color: var(--quiet); font-size: 15px; }
@@ -128,6 +130,7 @@ form.was-validated input:not([type="checkbox"]):invalid { border-color: var(--er
   .invitation { padding: 28px 25px 32px; }
   .brand-footer { align-items: flex-start; flex-direction: column; padding: 30px 25px 26px; }
   .notice-button { width: 100%; }
+  .edital-document iframe { height: 620px; }
 }
 
 @media (prefers-reduced-motion: no-preference) {
