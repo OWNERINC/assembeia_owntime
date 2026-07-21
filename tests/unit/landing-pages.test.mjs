@@ -143,6 +143,7 @@ test('serves the isolated landing page and keeps confirmations unavailable witho
     assert.match(pageMarkup, /29 de julho de 2026/);
     assert.match(pageMarkup, /1ª convocação - 08h30/);
     assert.match(pageMarkup, /Confirme sua presença até 27\/07\/2026/);
+    assert.doesNotMatch(pageMarkup, /Nest/);
     assert.match(pageMarkup, /href="\/owntime-assembleia\/styles.css"/);
     assert.match(pageMarkup, /src="\/owntime-assembleia\/form.js"/);
     assert.match(pageMarkup, /Para participar pelo celular ou tablet/);
