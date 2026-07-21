@@ -1,6 +1,6 @@
 window.OWNTIME_ASSEMBLEIA_CONFIG = {
-  editalUrl: 'https://docs.google.com/document/d/1cnxos-VG9KOizmUM3Tv3jdTRF_eKIbxj/edit?usp=sharing&ouid=102236141272258970733&rtpof=true&sd=true',
-  editalEmbedUrl: 'https://docs.google.com/document/d/1cnxos-VG9KOizmUM3Tv3jdTRF_eKIbxj/preview',
+  editalUrl: 'https://drive.google.com/file/d/1pL3gn3ENlAgAYC6a96JhrU5Ll11FwFSa/view?usp=sharing',
+  editalEmbedUrl: 'https://drive.google.com/file/d/1pL3gn3ENlAgAYC6a96JhrU5Ll11FwFSa/preview',
   privacyPolicyUrl: 'https://ownerinc.com.br/politica-de-privacidade/',
   formEnabled: true
 };
