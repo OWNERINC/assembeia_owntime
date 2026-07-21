@@ -155,6 +155,7 @@ test('serves the isolated landing page and keeps confirmations unavailable witho
     const stylesheet = await fetch(`http://127.0.0.1:${port}/owntime-assembleia/styles.css`);
     assert.equal(stylesheet.status, 200);
     assert.equal(stylesheet.headers.get('content-type'), 'text/css; charset=utf-8');
+    assert.match(await stylesheet.clone().text(), /form \.notice-button \{ margin-inline: 0; \}/);
 
     const internalFile = await fetch(`http://127.0.0.1:${port}/server.mjs`);
     assert.equal(internalFile.status, 404);

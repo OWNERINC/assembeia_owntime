@@ -90,6 +90,7 @@ dd { margin: 0; }
 .notice-button[aria-disabled="true"], .notice-button:disabled { cursor: not-allowed; opacity: 0.55; pointer-events: none; }
 
 form { margin-top: 44px; padding-top: 30px; border-top: 1px solid #cbc7bf; scroll-margin-top: 24px; }
+form .notice-button { margin-inline: 0; }
 .form-intro { margin-bottom: 24px; color: var(--quiet); font-size: 15px; }
 .field { margin-bottom: 18px; }
 .field label { display: block; margin-bottom: 7px; font-size: 14px; font-weight: 700; }
